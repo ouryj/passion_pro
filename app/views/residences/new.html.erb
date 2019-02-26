@@ -1,0 +1,5 @@
+<%= form_with(model: @res) do |f| %>
+<%= f.label :video %>
+<%= f.file_field :video %>
+<%= f.submit 'upload' %>
+<% end %>

@@ -1,0 +1,6 @@
+hello welocme to the test 
+<%= link_to 'new upload', new_residence_path %>
+<% @posts.each do |post|%>
+    
+    <%= video_tag post.video_url :controls =>true %>
+<%end%>

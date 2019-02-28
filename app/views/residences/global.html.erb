@@ -1,0 +1,12 @@
+<div class="container">
+
+<% @users.each do |user| %>
+<p> <strong> Name:</strong> <%= user.firstname %>  <%= user.lastname %> </p> <br>
+<p><strong>Gender:</strong> <%= user.gender %></p> <br>
+<p><strong>Username:</strong> <%=user.username %></p> <br>
+<p><strong> Residence Country :</strong><%= user.country%></p> <br>
+<p><strong>District:</strong> <%= user.district %> </p>
+<hr>
+<%end %>
+
+</div>

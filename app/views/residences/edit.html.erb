@@ -1,0 +1,12 @@
+<%= form_with(model: @res,  method: :put) do |f| %>
+<%=f.label :About %> <br>
+<%=f.text_field :title %> <br>
+<%= f.label :Post %> <br>
+<%= f.text_area :post, placeholder: 'share your post' %> <br>
+<%= f.label :upload_photo %> <br>
+<%= f.file_field :image %> <br />
+<%= f.label :upload_vimeo %> <br>
+<%= f.file_field :vimeo_file %> <br />
+
+<%= f.submit 'upload' %>
+<% end %>

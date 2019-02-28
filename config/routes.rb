@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-resources :residences 
+get 'residences/global'
+resources :residences  do
+  resources :comments 
+end
   root 'residences#index'
 
   devise_for :users

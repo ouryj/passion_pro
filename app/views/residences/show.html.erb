@@ -1,0 +1,19 @@
+<div class="container">
+   <%= @res.title %> <br>
+   <%= @res.post %> <br>
+   <%= image_tag(@res.image_url.to_s, :size => "220x220") %> <br>
+ <%= video_tag([@res.vimeo_file], :size => "320x240", :autoplay => true, :loop => true, controls: '') %>
+    <%= render @res.comments %>
+    
+    <%= form_with(model: @res, url: residence_comments_path(@res), method: :post) do |f| %>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name   %> <br>
+
+        <%= f.label :content %> <br>
+        <%= f.text_field :content  %> <br>
+
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.submit "Create Comment" %> <br>
+        <% end %>
+
+        </div>

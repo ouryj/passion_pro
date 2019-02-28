@@ -1,6 +1,16 @@
-hello welocme to the test 
-<%= link_to 'new upload', new_residence_path %>
+
+<div class="container">
 <% @posts.each do |post|%>
-    
-    <%= video_tag post.video_url :controls =>true %>
+ <p> <strong>User: </strong> <%= post.user.username %> </p><br>
+   <p> <strong> About: </strong><%= post.title %> </p><br>
+  <p><strong>Post:</strong> <%= post.post %> </p><br>
+  <p>Development image</p> <br>
+   <%= image_tag(post.image_url.to_s, :size => "220x220") %> <br>
+   <p>Development Video </p> <br>
+ <%= video_tag([post.vimeo_file], :size => "320x240", :autoplay => true, :loop => true, controls: '') %> <br>
+   <%= link_to 'leave a thought', residence_path(post) %> <br>
+   <%link_to 'edit post', edit_residence_path(post) %>
+
 <%end%>
+
+</div>

@@ -16,10 +16,24 @@
     <div class="field">
     <%= f.label :birthdate %><br />
     <%= f.date_field :birthdate, autofocus: true %>
-  </div>  <div class="field">
+  </div>  
+   <div class="field">
+   <%=f.label :Gender %> <br>
+   <%= f.text_field :gender, autofocus: true%>
+   </div>
+
+
+
+  <div class="field">
     <%= f.label :username%><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
+
+  <div class="field">
+   <%=f.label :district %> <br>
+   <%=f.select :district,collection: User::DISTRICTS %>
+  </div>
+
 
       <div class="field">
     <%= f.label :country %><br />

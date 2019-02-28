@@ -1,0 +1,15 @@
+<div class="container">
+<p><%= form_with(model: @res) do |f| %></p>
+<%=f.label :About %> <br>
+<p><%=f.text_field :title %> </p><br>
+<%= f.label :Post %> <br>
+<p><%= f.text_area :post, placeholder: 'share your post' %></p> <br>
+<%= f.label :upload_Photo %> <br>
+<%= f.file_field :image %> <br />
+<%= f.label :upload_Video %> <br>
+<%= f.file_field :vimeo_file %> <br>
+<p><%= f.submit 'upload' %></p> <br>
+<% end %>
+
+</div>
+

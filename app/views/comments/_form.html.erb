@@ -1,0 +1,13 @@
+<%= form_with(model: @res, url: residence_comments_path(@res), method: :post) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name   %>
+  </div>
+  </div>
+
+  <%= f.label :content %> <br>
+  <%= f.text_field :content  %>
+  </div>
+  </div>
+   <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit  %>
+<% end %>

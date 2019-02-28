@@ -1,3 +1,27 @@
 // Place all the styles related to the residences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-image: url("http://2.bp.blogspot.com/-q93a2yKzzjk/Ung-2R8Mu3I/AAAAAAAAEN0/xdsUNC3W9IY/s1600/P1490768.JPG");
+    background-size: cover;
+    
+}
+ .posts{
+    float: right;
+}
+.container p {
+   border-radius: 2px; color: white;
+}
+hr {
+    color: whitesmoke;
+}
+.container {
+    background-color:rgba(255, 234, 0, 0.2); flex: 350px; text-align: center;
+}
+.nav {
+    color: black;
+}
+
+body {
+    background-color: black;
+}
